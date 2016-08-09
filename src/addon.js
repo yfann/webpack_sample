@@ -11,6 +11,6 @@ if(_DEV_){
 
 
 render(
-    <h1>Hello React</h1>,
+    <h1>Hello React!!</h1>,
     document.getElementById("container_1")
 );

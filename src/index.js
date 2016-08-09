@@ -4,6 +4,6 @@ import {render} from 'react-dom';
 var style=require('./app.css');
 
 render(
-    <h1 className={style.h1}>Hello World</h1>,
+    <h1 className={style.h1}>Hello World!!</h1>,
     document.getElementById("container")
 );

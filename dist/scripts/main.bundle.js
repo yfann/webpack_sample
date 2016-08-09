@@ -7614,7 +7614,7 @@ webpackJsonp([0,1],[
 	(0, _reactDom.render)(React.createElement(
 	    'h1',
 	    { className: style.h1 },
-	    'Hello World1111'
+	    'Hello World'
 	), document.getElementById("container"));
 
 /***/ },
