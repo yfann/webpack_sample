@@ -1,9 +1,11 @@
 import * as React from 'react';
 import {render} from 'react-dom';
+import App from './App';
+
 
 var style=require('./app.css');
 
 render(
-    <h1 className={style.h1}>Hello World!!</h1>,
+    <App/>,
     document.getElementById("container")
 );

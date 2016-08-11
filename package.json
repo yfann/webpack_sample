@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf dist",
+    "build:dll": "webpack --config webpack.dll.js",
+    "build": "npm run clean && npm run build:dll && webpack",
+    "watch": "npm run build:dll && webpack --config config.dev.js --watch --progress",
     "dev": "webpack-dev-server --content-base dist/",
     "test": "webpack-dev-server --hot --inline --content-base dist/"
   },
@@ -11,8 +15,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "material-ui": "^0.15.3",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "react-tap-event-plugin": "^1.0.0",
     "webpack": "^1.13.1"
   },
   "devDependencies": {

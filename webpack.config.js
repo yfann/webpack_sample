@@ -3,7 +3,7 @@ var Uglify=webpack.optimize.UglifyJsPlugin;
 var HtmlPlugin=require('html-webpack-plugin');
 var OpenBrowser=require('open-browser-webpack-plugin');
 var Common=require('webpack/lib/optimize/CommonsChunkPlugin');
-
+var path = require("path");
 var devFlag=new webpack.DefinePlugin({
     _DEV_:JSON.stringify(JSON.parse(process.env.DEBUG||'false'))
 });
@@ -19,7 +19,7 @@ module.exports = {
     ],
 	output: {
         filename: '[name].bundle.js',
-        publicPath:'/scripts/',
+        publicPath:'/static/somewhere/',
         path: __dirname + "/dist/scripts",
 	},
     module: {
@@ -56,6 +56,10 @@ module.exports = {
         // }),
         devFlag,
         new Common('common.js'),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        // new webpack.DllReferencePlugin({
+        //     context:path.join(__dirname,"dll"),
+        //     manifest:require("./dll/vendor-manifest.json")
+        // })
     ]
 };
